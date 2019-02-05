@@ -1,0 +1,8 @@
+Dockerfile
+classes  
+generated-sources  
+maven-archiver  
+maven-status
+src
+src/*
+pom.xml
