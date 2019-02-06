@@ -9,8 +9,9 @@ ENV appl_dir=$appl_dir
 
 ENV appl_port=$appl_port
 
-RUN  mkdir -p $appl_dir
-#VOLUME $appl_dir
+RUN  mkdir -p $appl_dir && useradd ecom
+
+USER ecom
 
 COPY target/*.jar $appl_dir
 
