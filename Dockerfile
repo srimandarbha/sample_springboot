@@ -1,20 +1,20 @@
 #
 FROM java
 
-ARG app_dir=/tmp
+ARG appl_dir=/tmp
 
-ARG app_port=8080
+ARG appl_port=8080
 
-ENV appl_dir=${app_dir}
+ENV appl_dir=$appl_dir
 
-ENV appl_port=${app_port}
+ENV appl_port=$appl_port
 
+RUN  mkdir -p $appl_dir
 #VOLUME $appl_dir
 
 COPY target/*.jar $appl_dir
 
-#WORKDIR $appl_dir
-#WORKDIR /app/
+WORKDIR $appl_dir
 
 EXPOSE $appl_port
 
